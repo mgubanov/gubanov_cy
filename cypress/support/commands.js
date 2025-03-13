@@ -16,10 +16,10 @@ Cypress.Commands.add("login", (username, password) => {
 });
 
 Cypress.Commands.add("fillAndConfirmCheckoutModal", (name) => {
-    cy.get('#name').invoke("val", name);
+    cy.get('#name').invoke("val", name);//mandatory
     cy.get('#country').invoke("val", "country");
     cy.get('#city').invoke("val", "city");
-    cy.get('#card').invoke("val", "card");
+    cy.get('#card').invoke("val", "card");//mandatory
     cy.get('#month').invoke("val", "month");
     cy.get('#year').invoke("val", "year");
 

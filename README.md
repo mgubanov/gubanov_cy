@@ -64,7 +64,7 @@ npx cypress open
 
 ### NOTES:
 * Login-related test cases can be extended with additional checks, such as input length validation, special character restrictions, and security measures. The cases I provided focus on covering straightforward gaps and common bugs, that should be checked at the first place.
-* The checkout process is quite broken. In its current state, there is no distinction between logged-in and guest users, nor between full or empty carts—everything results in a positive scenario. Based on this, I've created a few realistic scenarios for this particular demo site, like check out as a guest user, re-login and continue shopping, verify mandatory fields.
+* The checkout process is quite broken. In its current state, there is no distinction between logged-in and guest users, nor between full or empty carts—everything results in a positive scenario. Based on this, I've created a few realistic scenarios for this particular demo site, like check out as a guest user, re-login and continue shopping, verify mandatory fields. The remaining test cases would likely be quite similar, so I see no reason to demonstrate them here (e.g., checkout with multiple items, verify the credit card field). 
 * While working with the following resource(https://www.demoblaze.com), I noticed that many confirmation messages are implemented as alerts. To keep things simple, I decided to verify them as they are in tests rather than overcomplicating the approach.
 * Temporary waits (500-1000ms) were added to ensure smooth test execution. In real projects it is always better to wait for specific event or element.
 * AI tools were used: generating markdown, check grammar, writing regular expressions.  
