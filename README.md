@@ -21,7 +21,6 @@ Ensure the following are installed on your system:
 - **npm**
 
 ## Install Cypress
-
 Run the following command to install Cypress as a development dependency:
 
 ```sh
@@ -35,7 +34,6 @@ npx cypress -v
 ```
 
 ## Clone the Project
-
 Clone the repository from GitHub:
 
 ```sh
@@ -47,7 +45,6 @@ cd gubanov_cy
 npm install
 
 ## Run Tests
-
 Execute Cypress tests using:
 
 ```sh
@@ -66,12 +63,11 @@ npx cypress open
 
 
 ### NOTES:
-* The resource https://www.demoblaze.com frequently uses alerts as confirmation messages, which I believe is not the best practice. However, instead of refactoring everything into custom functions, I decided to assert content based on alerts to save time.
-
 * Login-related test cases can be extended with additional checks, such as input length validation, special character restrictions, and security measures. The cases I provided focus on covering straightforward gaps and common bugs, that should be checked at the first place.
-
-* The checkout process is quite broken. In its current state, there is no distinction between logged-in and guest users, nor between full or empty carts—everything results in a positive scenario. Based on this, I've created a few realistic scenarios for this particular demo site, like check out as a guest user, re-login and continue shopping, checked mandatory fields.
-* AI tools were used: generating markdown, check grammar in readme, writing regular expressions.  
+* The checkout process is quite broken. In its current state, there is no distinction between logged-in and guest users, nor between full or empty carts—everything results in a positive scenario. Based on this, I've created a few realistic scenarios for this particular demo site, like check out as a guest user, re-login and continue shopping, verify mandatory fields.
+* While working with the following resource(https://www.demoblaze.com), I noticed that many confirmation messages are implemented as alerts. To keep things simple, I decided to verify them as they are in tests rather than overcomplicating the approach.
+* Temporary waits (500-1000ms) were added to ensure smooth test execution. In real projects it is always better to wait for specific event or element.
+* AI tools were used: generating markdown, check grammar, writing regular expressions.  
 
 ### CASES:
 #### Login:
