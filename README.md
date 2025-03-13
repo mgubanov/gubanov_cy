@@ -7,10 +7,10 @@ This guide provides step-by-step instructions on setting up a Cypress project an
 │── cypress/
 │   ├── fixtures/         # Sample test data
 │   ├── e2e/              # Test cases (E2E tests)
-│   ├── support/         # Custom commands and reusable utilities
+│   ├── support/          # Custom commands and reusable utilities
 │── cypress.config.js     # Cypress configuration file
-│── package.json         # Project metadata and dependencies
-│── README.md            # Documentation
+│── package.json          # Project metadata and dependencies
+│── README.md             # Documentation
 ```
 
 ## Preconditions
@@ -66,11 +66,11 @@ npx cypress open
 
 
 ### NOTES:
-* The resource frequently uses alerts as confirmation messages, which I believe is not the best practice. However, instead of refactoring everything into custom functions, I decided to assert content based on alerts to save time.
+* The resource https://www.demoblaze.com frequently uses alerts as confirmation messages, which I believe is not the best practice. However, instead of refactoring everything into custom functions, I decided to assert content based on alerts to save time.
 
-* Login-related test cases can be extended with additional checks, such as input length validation, special character restrictions, and security measures. The cases I provided focus on covering straightforward gaps and common bugs.
+* Login-related test cases can be extended with additional checks, such as input length validation, special character restrictions, and security measures. The cases I provided focus on covering straightforward gaps and common bugs, that should be checked at the first place.
 
-* The checkout process is quite broken. In its current state, there is no distinction between logged-in and guest users, nor between full or empty carts—everything results in a positive scenario. Based on this, I've created a few realistic scenarios for this particular demo site.
+* The checkout process is quite broken. In its current state, there is no distinction between logged-in and guest users, nor between full or empty carts—everything results in a positive scenario. Based on this, I've created a few realistic scenarios for this particular demo site, like check out as a guest user, re-login and continue shopping, checked mandatory fields.
 * AI tools were used: generating markdown, check grammar in readme, writing regular expressions.  
 
 ### CASES:
