@@ -1,7 +1,7 @@
 import constants from '../support/constants';
 import errors from "../support/errors";
 
-describe("Login Test - successful scenario", () => {
+describe("Login Test - successful scenarios", () => {
     it("Login successfully by entering valid credentials", () => {
         cy.visit(constants.BASE_URL);
         cy.login(constants.VALID_USERNAME, constants.VALID_PASSWORD);

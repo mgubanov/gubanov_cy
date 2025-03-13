@@ -1,5 +1,3 @@
-//todo rework this as utils
-
 Cypress.Commands.add("login", (username, password) => {
     cy.get('#login2').click();
     cy.get('#loginusername')
@@ -36,23 +34,11 @@ Cypress.Commands.add("verifyCheckout", () => {
     cy.get('.showSweetAlert p.lead.text-muted')
         .invoke('text')
         .then((text) => {
-            expect(text).to.match(/Id: \d+/); // Validate order ID format
-            expect(text).to.match(/Amount: \d+ USD/); // Validate dynamic amount (e.g., "Amount: 123 USD")
-            expect(text).to.match(/Card Number:\s+\w+/); // Validate card number presence
-            expect(text).to.match(/Name:\s+\w+/); // Validate name presence
-            expect(text).to.match(/Date: \d{1,2}\/\d{1,2}\/\d{4}/); // Validate date format
+            expect(text).to.match(/Id: \d+/);
+            expect(text).to.match(/Amount: \d+ USD/);
+            expect(text).to.match(/Card Number:\s+\w+/);
+            expect(text).to.match(/Name:\s+\w+/);
+            expect(text).to.match(/Date: \d{1,2}\/\d{1,2}\/\d{4}/);
         });
-});
-
-Cypress.Commands.add('verifyLastAlert', (expectedMessage) => {
-    let alerts = [];
-
-    cy.on('window:alert', (text) => {
-        alerts.push(text);
-    });
-
-    cy.then(() => {
-        expect(alerts[alerts.length - 1]).to.equal(expectedMessage);
-    });
 });
 
