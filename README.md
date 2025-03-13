@@ -3,7 +3,7 @@
 This guide provides step-by-step instructions on setting up a Cypress project and running tests.
 ## Project Structure
 ```
-/gubanov-cy
+/gubanov_cy
 │── cypress/
 │   ├── fixtures/         # Sample test data
 │   ├── e2e/              # Test cases (E2E tests)
